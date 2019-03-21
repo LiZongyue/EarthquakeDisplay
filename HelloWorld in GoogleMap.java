@@ -12,7 +12,7 @@ import de.fhpotsdam.unfolding.utils.MapUtils;
   * An application with two maps side-by-side zoomed in on different locations.
   * Author: UC San Diego Coursera Intermediate Programming team
   * @author Zongyue Li
-  * Date: July 17, 2015
+  * Date: March 20, 2019
   * */
 public class HelloWorld extends PApplet
 {
