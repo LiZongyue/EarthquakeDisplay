@@ -1,6 +1,6 @@
 # Java.coursera
 
-A Start-Project with Java
+A Start-Project with Java, totally 5 modules
 
 1.HelloWorld.Java
 --------------------------------
