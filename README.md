@@ -2,12 +2,12 @@
 
 A Start-Project with Java
 
-HelloWorld.Java
+1.HelloWorld.Java
 --------------------------------
 The first mini project was developed for the sake of getting familiar with the library Processing and UnfoldingMap package offered by FH Potsdam。
 Not much thing to do, but just added some code to display a Map of authour's location.
 
-EarthquakeCityMap.java
+2.EarthquakeCityMap.java
 --------------------------------
 The second mini Project was developed in order to use the processing library to build a simple GUI. The aim of this project is to read the Earthquake data from a website [Earthquakes/USGS](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom) and displays the earthquake in a visually Map drawn in the canvas provided by PApplet.
 In this project
