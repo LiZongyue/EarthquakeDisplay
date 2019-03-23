@@ -17,5 +17,5 @@ In this project
 4. a method called createMarker is developed which defines the behavior of the relationship of SimplePointMarker and the parameter PointFeature of this method, then returns an instance object SimplePointMarker.
 5. the Behavior is: extract the location and magnitude of the Earthquake stored in the PointFeature and instantiated an object of SimplePointMarker with the parameter of extracted location. Next step is based on the magnitude to assign different color and radius to the SimplePointMarker object which will be displayed in the map corresponds to its location.
 6. iterated the ArrayList of PointFeature and for each step the method CreateMarker will be called and thus for each step the returned instantiated SimplePointMarker will be passed to the Markers in the ArrayList.
-7. different objects such as circles with color and texts are drawn as a Key in the canvas provided by PApplet／
+7. different objects such as circles with color and texts are drawn as a Key in the canvas provided by PApplet
 % In ArrayList, the add method returns a value of datatype boolean. If there is no boolean value which receives the returned value, it's also ok.
