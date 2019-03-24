@@ -4,13 +4,16 @@ A Start-Project with Java, totally 5 modules
 
 1.HelloWorld.Java
 --------------------------------
-The first mini project was developed for the sake of getting familiar with the library Processing and UnfoldingMap package offered by FH Potsdam。
+The first mini project was developed for the sake of getting familiar with the library Processing and UnfoldingMap package offered by FH Potsdam.
+
 Not much thing to do, but just added some code to display a Map of authour's location.
 
 2.EarthquakeCityMap.java
 --------------------------------
 The second mini Project was developed in order to use the processing library to build a simple GUI. The aim of this project is to read the Earthquake data from a website [Earthquakes/USGS](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom) and displays the earthquake in a visually Map drawn in the canvas provided by PApplet.
+
 In this project
+
 1. an object UnfoldingMap is instantiated, the created map uses the API provided by MicrosoftMap.
 2. two ArrayLists are created which. One of them stores instance objects of SimplePointMarker which implements the Interface Marker provided by UnfoldingMap, another store instance objects of PointFeature which is a subclass of Feature also provided by UnfoldingMap.
 3. Extracted the Information of earthquakes and stored them in the PointFeature ArrayList objectwise.
@@ -22,19 +25,21 @@ In this project
 
 3.Package Module4
 --------------------------------
-#file Introduction
+
+file Introduction
 
 In this package, there are totally five .java files.
+
 They are as follows: 
-1.CityMarker.java
-2.EarthquakeMarker.java
-3.LandQuakeMarker.java
-4.OceanQuakeMarker.java
-5.EarthquakeCityMap.java
+1. CityMarker.java
+2. EarthquakeMarker.java
+3. LandQuakeMarker.java
+4. OceanQuakeMarker.java
+5. EarthquakeCityMap.java
 
 The respectively iheritance relationships of them are as follows:
-1.CityMarker extends SimplePointMarker
-2.EarthquakeMarker extends SimpleMarker
-3.LandQuakeMarker extends EarthquakeMarker
-4.OceanQuakeMarker extends EarthquakeMarker
-5.EarthquakeCityMap extends PApplet
+1. CityMarker extends SimplePointMarker
+2. EarthquakeMarker extends SimpleMarker
+3. LandQuakeMarker extends EarthquakeMarker
+4. OceanQuakeMarker extends EarthquakeMarker
+5. EarthquakeCityMap extends PApplet
