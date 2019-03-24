@@ -80,6 +80,6 @@ In Step 3, with the helper method 'isInCountry', the Earthquake can be determine
 
 Then Island is used to determine the protected boolean field isOnland. The PointFeatrue of the earthquake will be added in ArrayList which stores Earthquakes. But it will be added separately due to the result given by Islan, if it's true, a new object of LandquakeMarker will be instantiated and added as the parameter for .add, otherwise of OceanquakeMarker. In this procedure, isOnland is assigned with boolean value.
 
-In step 4, the key is to compare the name property of 2 different type markers by iterating them. 
+In step 4, the key is to compare the name property of 2 different types of markers by iterating them. 
 
 In step 6, what should be concentrated on is that The line map.draw() tells the UnfoldingMap to redraw itself, making all classes that implement the Marker interface, like SimplePointMarker, to redraw itself, i.e. **call the draw(PGraphics pg, float x, float y) method**.
