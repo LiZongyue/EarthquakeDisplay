@@ -26,7 +26,7 @@ In this project
 3.Package Module4
 --------------------------------
 
-file Introduction
+### file Introduction
 
 In this package, there are totally five .java files.
 
@@ -43,3 +43,33 @@ The respectively iheritance relationships of them are as follows:
 3. LandQuakeMarker extends EarthquakeMarker
 4. OceanQuakeMarker extends EarthquakeMarker
 5. EarthquakeCityMap extends PApplet
+
+### What to do
+
+1. Find and open the starter code: You will find the starter code for this part of the project in the module4 package. Expand the module4 package in the package explorer and you will see 5 java files: EarthquakeCityMap.java , EarthquakeMarker.java , CityMarker.java , LandQuakeMarker.java , OceanQuakeMarker.java. You can open any of them by double-clicking on them. Make sure you are working on the files in the module4 package and don't peek ahead to the other packages. We recommend making sure all other files are closed in Eclipse so you don’t get confused which file you are working on.
+
+#### Hint for part 1:
+> In the data folder (which is at the same level as the src folder), you will also see a file named “city-data.json”. You don’t have to modify that file, but if your favorite city is not there, you can add it by editing the file. Just be sure to match the format and data of the other cities exactly!
+
+2. Trace the starter code (starting in setup in EarthquakeCityMap.java), predict what happens when you run it, and then run it. IF YOU ARE WORKING OFFLINE: Don’t forget to change the value of the offline variable to true, otherwise you will get an error. Notice that the file EarthquakeCityMap.java implements most of the functionality that you worked on in the programming assignment for module 3, but it's not exactly the same. Are you surprised by what happens (or doesn't happen) when you run it?
+
+#### Hint for part 2: 
+> We’ll ask you about this behavior on the end of module assessment so you might want to make a note of what’s going on and why.
+
+3. Implement the isLand(Feature earthquake) method in EarthquakeCityMap. This method should return true if the location of the input earthquake is on land. It should also set the "country" property on the LandMarker to the country where the earthquake occurred. Otherwise, the location is in the ocean and the method should return false. You will test this method once you have implemented the next method.
+
+#### Hint for part 3: 
+> A location is on land if it is located in *some* country. So, you can loop through all countries and check if the location is in any one of them. You can (and should) use the helper method isInCountry() given in the file, which takes care of a lot of the work of isLand for you, including setting the "country" property of the earthquake PointFeature. There is not a lot of code to add for this part.
+
+4. Implement the printQuakes() method in EarthquakeCityMap. This method should use System.out.println() to list each country for which there was 1 or more earthquakes and the number of earthquakes detected in that country. Then it should print out the number of quakes that were detected in the ocean. Note that this method is not trivial. You will have to calculate the number of earthquakes per country from the information you have available. As an aside: If you are running the applet with a large earthquake file/feed (e.g. 1.0+ Past week or 30 days), you might find that printQuakes takes a long time to run. Feel free to comment out the call to printQuakes() in setup once you get it working if you find this is the case.
+
+#### Hint for part 4:
+> A straightforward solution uses a nested loop (over the countries and then the earthquakes). The solution need not be perfectly efficient (it's okay to loop over all the earthquakes many times). For more hints, please see the starter code and forum discussion.
+
+5. Test isLand and printQuakes. To facilitate basic testing, we have included two tester input files (test1.atom and test2.atom) and two files that include the expected output (test1.out.txt and test2.out.txt) for each of these test files. All files are in the data folder. You will see lines in the starter code for setup() that you can uncomment in order to run with the tester files. (Uncomment 1 line at a time). You can run each test and compare them to the test output, which you can open in eclipse by double-clicking it in the package explorer. If both outputs match, it is likely that you have implemented both isLand and printQuakes correctly. Note that order and formatting does not have to match.
+
+
+6. Complete the method definition for the draw() method in the CityMarker class. We suggest you use triangles to represent cities, but of course the exact shape and color is up to you. Then add the marker to your key (which you will need to modify as you change your earthquake markers). Your map should now look something like the image below.
+
+#### Hint for part 6:
+> Because you are no longer working in the PApplet class, you will need to use the PGraphics object for drawing. You can call the same methods you were calling when you were drawing on the PApplet, but you call them on the pg object. The arguments x and y should be used (and passed into your graphics calls) as the center of the Marker you are drawing. See the comments in the draw() method for an example of how to do this.
