@@ -19,3 +19,23 @@ In this project
 6. iterated the ArrayList of PointFeature and for each step the method CreateMarker will be called and thus for each step the returned instantiated SimplePointMarker will be passed to the Markers in the ArrayList.
 7. different objects such as circles with color and texts are drawn as a Key in the canvas provided by PApplet
 % In ArrayList, the add method returns a value of datatype boolean. If there is no boolean value which receives the returned value, it's also ok.
+
+3.Package Module4
+--------------------------------
+
+##file Introduction
+In this package, there are totally five .java files.
+
+They are as follows: 
+1.CityMarker.java
+2.EarthquakeMarker.java
+3.LandQuakeMarker.java
+4.OceanQuakeMarker.java
+5.EarthquakeCityMap.java
+
+The respectively iheritance relationships of them are as follows:
+1.CityMarker extends SimplePointMarker
+2.EarthquakeMarker extends SimpleMarker
+3.LandQuakeMarker extends EarthquakeMarker
+4.OceanQuakeMarker extends EarthquakeMarker
+5.EarthquakeCityMap extends PApplet
