@@ -73,3 +73,13 @@ The respectively iheritance relationships of them are as follows:
 
 #### Hint for part 6:
 > Because you are no longer working in the PApplet class, you will need to use the PGraphics object for drawing. You can call the same methods you were calling when you were drawing on the PApplet, but you call them on the pg object. The arguments x and y should be used (and passed into your graphics calls) as the center of the Marker you are drawing. See the comments in the draw() method for an example of how to do this.
+
+### What has been done
+
+In Step 3, with the helper method 'isInCountry', the Earthquake can be determined whether it happened in the given Land. Its arguments are PointFeature which relates to Earthquake and Marker which associates with Country(Land). Thus we further implement the method Island to return a boolean value which indicates a binary result whether the earthquake has happened in a country or not, for every country which located in the file "countries.geo.json". 
+
+Then Island is used to determine the protected boolean field isOnland. The PointFeatrue of the earthquake will be added in ArrayList which stores Earthquakes. But it will be added separately due to the result given by Islan, if it's true, a new object of LandquakeMarker will be instantiated and added as the parameter for .add, otherwise of OceanquakeMarker. In this procedure, isOnland is assigned with boolean value.
+
+In step 4, the key is to compare the name property of 2 different type markers by iterating them. 
+
+In step 6, what should be concentrated on is that The line map.draw() tells the UnfoldingMap to redraw itself, making all classes that implement the Marker interface, like SimplePointMarker, to redraw itself, i.e. **call the draw(PGraphics pg, float x, float y) method**.
