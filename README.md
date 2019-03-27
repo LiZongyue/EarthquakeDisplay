@@ -77,3 +77,27 @@ Then Island is used to determine the protected boolean field isOnland. The Point
 In step 4, the key is to compare the name property of 2 different types of markers by iterating them. 
 
 In step 6, what should be concentrated on is that The line map.draw() tells the UnfoldingMap to redraw itself, making all classes that implement the Marker interface, like SimplePointMarker, to redraw itself, i.e. **call the draw(PGraphics pg, float x, float y) method**.
+
+4.Package Module5
+--------------------------------
+
+### tiny change from Module4
+#### the Inheritance :
+The Class CommonMarker is a new Class which is the superclass of CityMarker and EarthequakeMarker.
+
+### What has been done
+
+1. Implement the selectMarkerIfHover helper method in EarthquakeCityMap.
+> In this step, the design logic is described as follows:
+> - Firstly, add an if statement to guarantee that there is no more than one Marker which will be drawn simultaneously. The way to determine is to check whether the object *lastSelected* refers to a marker object. If not, it will be assigned to null. 
+> - Secondly, iterate all the Markers which are passed as parameters. In the loop we will determine whether the location of Mouse is inside the location of Marker, if it is, the Marker *lastSelected* will be referred to the current EarthquakeMarker and set the value of selected to be true by a setter method *setSelect*.
+
+2. Implement the showTitle(PGraphics pg, float x, float y) in both EarthquakeMarker and CityMarker.
+> - the method showTitle is an abstract method in the superclass CommonMarker. So it must be implemented in the subclasses. The passed parameters in showTitle are PGhpics(is relavant with draw() method in setup), the location of Marker. Simply to draw some rectangle and display the text in the canvas.
+> - The Logic is associated with step 1. In step 1, the boolean select is set to be true when the locations of the mouse and Marker are at the same. In draw method in CommonMarker, if *select* is true, it will invoke showTitle method to draw the information about the selected marker.
+
+3. Implement the mouseClicked() method in EarthquakeCityMap.
+> In this step, the design logic is described as follows:
+> - If I have clicked my mouse in a city or an earthquake(object lastClicked refers to a Citymarker or an EarthquakeMarker), then the next click in everywhere in the map will unhide all the Markers.
+> - If I haven't clicked my mouse in a city or an earthquake(object lastClicked refers to null), and the current mouse click is combined with an earthquake Marker whose Hidden value is false, then the other earthquakes' Hidden value will be assigned to true, the cityMarkers whose location is in the circle of the earthquake will be displayed in the map, others will be hidden(Determined and operated by Hidden value).
+> - If I haven't clicked my mouse in a city or an earthquake(object lastClicked refers to null), and the current mouse click is associated with a city Marker whose Hidden value is false, then the other cities' Hidden value will be assigned to true. The earthquake which can influence the city will also be displayed, the way to determine whether it is the same as last step, namely calculate the distance between city and earthquake and then compare to the value of the influence distance of the earthquake(depends on magnitude).
