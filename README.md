@@ -1,4 +1,4 @@
-# Java.coursera
+# JavaEarthquakeDisplay
 
 A Start-Project with Java, totally 5 modules
 
